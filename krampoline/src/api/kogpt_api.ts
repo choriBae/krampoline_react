@@ -5,12 +5,14 @@ export async function summarizeReview(reviewText: string, creativity: number) {
 		temperature: creativity,
 		top_p: 0,
 	};
+
+	const apikey = d2a171c15d08dac5fce2abcc4cf5a36f
 	try {
 		const response = await fetch('/v1/inference/kogpt/generation', {
 			method: 'POST',
 			headers: {
 				credentials: 'include',
-				Authorization: `KakaoAK ${process.env.REACT_APP_KAKAO_REST_API_KEY}`,
+				Authorization: `KakaoAK ${apikey}`,
 				'Content-Type': 'application/json',
 			},
 			body: JSON.stringify(requestBody),
