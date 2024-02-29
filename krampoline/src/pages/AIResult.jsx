@@ -9,9 +9,7 @@ import styled from 'styled-components';
 import Image from '../assets/Image.png';
 import Img2 from '../assets/Img2.png';
 
-const DetailOreum = () => {
-	const { detailId } = useParams();
-	console.log('page _id, detailId');
+const AIResult = () => {
 	const [searchParams] = useSearchParams();
 	const queryList = [...searchParams];
 	const oreumData = Object.fromEntries(queryList);
@@ -31,7 +29,7 @@ const DetailOreum = () => {
 					<p className='text-[#2B2D36] text-sm font-medium leading-6'>{oreumData.oleumAddr}</p>
 				</div>
 				<h1 className='my-4 text-3xl font-extrabold'>{oreumData.oleumKname}</h1>
-				<WeatherCard weather='sunny' detail='기온 7도 습도 15% ' />
+				<WeatherCard weather='sunny' detail='기온 7도 습도 13% ' recommendation={oreumData.reason} />
 				<h2 className='mb-4 text-lg font-extrabold text-#2B2D36'>장소 특징</h2>
 				<div className='flex justify-around'>
 					<img src={Image} />
@@ -52,7 +50,9 @@ const DetailOreum = () => {
 				</div>
 			</section>
 			<section className='flex justify-center gap-4 mt-16 align-center'>
-				<TryAgain>추천 한번 더</TryAgain>
+				<Link to='/form'>
+					<TryAgain>추천 한번 더</TryAgain>
+				</Link>
 				<Link to='/'>
 					<GoHome>홈으로</GoHome>
 				</Link>
@@ -147,4 +147,4 @@ font-weight: 500;
 line-height: 1.5rem; /* 150% */
 letter-spacing: -0.00625rem;
 `;
-export default DetailOreum;
+export default AIResult;
