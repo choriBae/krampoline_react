@@ -1,32 +1,30 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import locationImg from '../assets/LocationIcon.svg';
-import pig from '../assets/pig.svg';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import locationImg from "../assets/LocationIcon.svg";
+import pig from "../assets/pig.svg";
+import { Link } from "react-router-dom";
 
 const MainModal = ({ currentLocation }) => {
-	const { region_1depth_name, region_2depth_name, region_3depth_name } = currentLocation;
-	console.log(region_1depth_name + region_2depth_name);
+  const { region_1depth_name, region_2depth_name, region_3depth_name } = currentLocation;
+  console.log(region_1depth_name + region_2depth_name);
 
-	return (
-		<Modal>
-			<NowLoca>
-				<img src={locationImg}></img>현재 위치는
-			</NowLoca>
-			<Location>{`${region_1depth_name} ${region_2depth_name} ${region_3depth_name}`}</Location>
-			<div style={{ display: 'flex', color: '#FF7C43', alignSelf: 'flex-start', marginBottom: '25px' }}>
-				<span>기온 15%</span>
-				<span>습도 15%</span>
-			</div>
-			<div style={{ position: 'relative' }}>
-				<Link to='/form'>
-					<Button>산/바다 추천받기</Button>
-				</Link>
-				<img src={pig} style={{ width: '70px', height: '69px', position: 'absolute', top: '-40px', right: '0' }} />
-			</div>
-		</Modal>
-	);
+  return (
+    <Modal>
+      <NowLoca>
+        <img src={locationImg}></img>현재 위치는
+      </NowLoca>
+      <Location>{`${region_1depth_name} ${region_2depth_name} ${region_3depth_name}`}</Location>
+      <div style={{ display: "flex", color: "#FF7C43", alignSelf: "flex-start", marginBottom: "25px" }}>
+        <span>기온 7’C, 습도 15%</span>
+      </div>
+      <div style={{ position: "relative" }}>
+        <Link to="/form">
+          <Button>산/바다 추천받기</Button>
+        </Link>
+        <img src={pig} style={{ width: "70px", height: "69px", position: "absolute", top: "-40px", right: "0" }} />
+      </div>
+    </Modal>
+  );
 };
 
 export default MainModal;
@@ -58,45 +56,45 @@ const Modal = styled.div`
 `;
 
 const NowLoca = styled.div`
-	align-self: flex-start;
-	box-sizing: border-box;
-	display: flex;
-	padding: 5px 10px;
-	align-items: start;
-	gap: 5px;
+  align-self: flex-start;
+  box-sizing: border-box;
+  display: flex;
+  padding: 5px 10px;
+  align-items: start;
+  gap: 5px;
 
-	border-radius: 100px;
-	border: 1px solid #ff7c43;
-	background: #fff;
+  border-radius: 100px;
+  border: 1px solid #ff7c43;
+  background: #fff;
 `;
 
 const Location = styled.div`
-	color: #2b2d36;
-	text-align: left;
+  color: #2b2d36;
+  text-align: left;
 
-	font-family: Pretendard;
-	font-size: 24px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 36px;
-	letter-spacing: -0.3px;
+  font-family: Pretendard;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: -0.3px;
 `;
 
 const Button = styled.button`
-	box-sizing: border-box;
-	display: flex;
-	width: 328px;
-	padding: 14px 24px;
-	justify-content: center;
-	align-items: center;
-	gap: 10px;
+  box-sizing: border-box;
+  display: flex;
+  width: 328px;
+  padding: 14px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 
-	color: white;
-	border-radius: 8px;
-	background: #3dcb98;
-	border: none;
+  color: white;
+  border-radius: 8px;
+  background: #3dcb98;
+  border: none;
 
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 
-	cursor: pointer;
+  cursor: pointer;
 `;
