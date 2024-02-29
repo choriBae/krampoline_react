@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/static/css/main.eab0690e.css",
+    "main.js": "/static/js/main.bfff8552.js",
+    "static/media/sea.svg": "/static/media/sea.d148fd0e0c611d69bd166b0d6dbbf390.svg",
+    "static/media/Rectangle.svg": "/static/media/Rectangle.b1e3898ee2b1c040dc8ae196c937d382.svg",
+    "static/media/mountain.svg": "/static/media/mountain.4f8ea2fa7ccb3ab4c1cea557848e70a4.svg",
+    "static/media/pig.svg": "/static/media/pig.7b609fb84eb0f15c52e4bafd47803dbe.svg",
+    "static/media/loading_Img.svg": "/static/media/loading_Img.843c622c8ec33c27aa69369afdf20a45.svg",
+    "static/media/Image.png": "/static/media/Image.57efb4c1495e36373159.png",
+    "static/media/Img2.png": "/static/media/Img2.97d7fb3d2952ceb91406.png",
+    "index.html": "/index.html",
+    "static/media/LocationIcon.svg": "/static/media/LocationIcon.b1be945634412fa6fe4329847f266185.svg",
+    "main.eab0690e.css.map": "/static/css/main.eab0690e.css.map",
+    "main.bfff8552.js.map": "/static/js/main.bfff8552.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eab0690e.css",
+    "static/js/main.bfff8552.js"
+  ]
+}
